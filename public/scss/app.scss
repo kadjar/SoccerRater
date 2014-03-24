@@ -1,0 +1,283 @@
+@import "compass";
+@import "normalize";
+@import "grid";
+@import "vars";
+@import "oocss";
+@import "type";
+
+*, *:before, *:after {
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html { height: 100%; }
+
+body {
+  background-color: $clr-black;
+  width: 500px;
+  // max-width: 500px;
+  height: 100%;
+  margin: 0px auto;  
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  float: left;
+  background-color: $clr-back;
+}
+
+// Header
+
+.headerbar {
+  > div {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+.logo {
+  text-decoration: none;
+}
+
+
+
+// Field
+
+.field {
+  background: url('../img/field.jpg') top center no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .player {
+    margin: 0px;
+    text-align: center;
+    font-size: 12px;
+    background: rgba($clr-back, 0.8);
+    @include border-radius(3px);
+    padding: 3px 5px;    
+  }
+
+  width: 100%;
+  height: 345px;
+
+  > .team-player {
+    position: absolute;
+    width: 20%;
+    margin-left: -10%;
+    cursor: pointer;
+  }  
+}
+.formation-4-2-3-1 {
+  > .GK {
+    top: 40px;
+    left: 50%;
+  }
+
+  > .DR, > .DL, > .DCR, > .DCL { top: 100px; }
+  > .DL {left: 15%; }
+  > .DR { left: 85%; }
+  > .DCL { left: 38%; }
+  > .DCR { left: 62%; }
+
+  > .DMCL, > .DMCR { top: 160px; }
+  > .DMCL { left: 35%; }
+  > .DMCR { left: 65%; }
+
+  > .AML, > .AMC, > .AMR { top: 230px; }
+  > .AML { left: 25%; }
+  > .AMC { left: 50%; }
+  > .AMR { left: 75%; }
+
+  > .FW {
+    top: 290px;
+    left: 50%;
+  }
+}
+
+// Player data
+.playerDetail {
+  padding: 20px;
+}
+.headshot {
+  background: $clr-back-dk;
+  width: 20%;
+  line-height: 0px;
+  > img {
+    width: 100%;
+  }  
+}
+
+.playerDetail-name {
+  margin: 0px;  
+
+  &.playerDetail-firstName {
+    color: $clr-grey;
+    margin-top: 20px;
+  }
+  &.playerDetail-lastName {
+    font-weight: bold;
+    font-size: 36px;
+    text-transform: uppercase;
+  }
+}
+.playerDetail-number {
+  font-style: italic;
+  color: $clr-grey;
+}
+.playerDetail-stats {
+  > .row {
+    > dt, > dd {
+      float: left;
+      margin-bottom: 5px; 
+    }
+    > dt {
+      width: 30%;
+    }
+    > dd {
+      color: $clr-grey;
+    }
+  }  
+}
+
+// Rating
+.playerSlider {
+  width: 100%;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  position: relative;
+  
+  > .bar {
+    height: 50%;
+    z-index: 0;
+    background: $clr-back-lt;
+    left: 0;
+    top: 25%;
+    cursor: pointer;
+  }
+
+  > .pointer {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    @include border-radius(3px);
+    top: 0;
+    bottom: 0;
+    background-color: $clr-link;    
+  }
+  > .floor, .ceiling {
+    display: none;
+  }
+  > .input {
+    cursor: pointer;
+  }
+}
+.playerRatings-key {
+  margin-bottom: 20px;
+  > dt, > dd {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+  }
+  > dt { width: 40%; }
+  > dd {
+    font-weight: bold;
+    background: $clr-back-dk;
+    padding: 0px 10px;
+    @include border-radius(3px);
+  }
+  .playerRatings-proRating {
+    color: $clr-purple;    
+  }
+  .playerRatings-liveRating {
+    color: $clr-blue;
+  }
+}
+/** # Charts and Graphs # **/
+.chart {
+  margin: 20px 0px;
+}
+
+.score-chart-background {
+  fill: $clr-back;
+}
+
+.score-chart-time_elapsed {
+  fill: $clr-back-dk;
+}
+
+.score-chart-tick {
+  stroke: black;
+  stroke-width: .2;
+}
+
+.score-chart-pro-rating {
+  fill: none;
+  stroke: $clr-purple;
+  stroke-width: 2;
+}
+.score-chart-live-rating {
+  fill: none;
+  stroke: $clr-blue;
+  stroke-width: 2;
+}
+
+// Game Events
+
+.gameEvents-list {
+  list-style: none;
+  margin: 0px 0px 100px 0px;
+  padding: 0px;
+
+  > .gameEvents-item {
+    padding: 10px;
+
+    &:nth-of-type(even) {
+      background-color: rgba(255,255,255,0.1);
+    }
+  }
+}
+
+
+
+/*
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*/
+@media only screen and (min-width: 481px) {
+
+ // styles in 481up.scss
+ @import "481up";
+
+} // end of media query
+
+/*
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+// @media only screen and (min-width: 768px) {
+//  // styles in 768up.scss
+//  @import "768up";
+
+// } // end of media query
+
+// /*
+// DESKTOP
+// This is the average viewing window. So Desktops, Laptops, and
+// in general anyone not viewing on a mobile device. Here's where
+// you can add resource intensive styles.
+// */
+// @media only screen and (min-width: 1030px) {
+
+//  // styles in 1030up.scss
+//  @import "1030up";
+
+// } // end of media query

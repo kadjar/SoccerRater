@@ -1,0 +1,14 @@
+extends layout
+
+block body
+  .wrapper(ng-controller='AppCtrl')
+    .row.headerbar.padded
+      .sixcol.first
+        a.logo.clr-white.h3(href="/") SoccerRater
+      .sixcol
+        p.align-right {{ gameData.teams[0].abbr }} {{ gameData.match.score[0] }} --- {{ gameClock }} --- {{ gameData.match.score[1] }} {{ gameData.teams[1].abbr }}
+    .row.align-center
+      button.button-green.margined(ng-click="start()") Start Game
+      button.button-green.margined(ng-click="stop()") Reset Game      
+
+    div(ng-view)

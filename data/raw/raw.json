@@ -1,0 +1,521 @@
+bayernPlayers = {"217":{"name":"Claudio Pizarro","proRating":0,"gameStats":[[["formation_place",[0]]]],"number":14,"position":"Sub","subbed":0,"playable":"AM(C),FW","age":35,"height":184,"weight":84},"2179":{"name":"Daniel van Buyten","proRating":0,"gameStats":[[["formation_place",[0]]]],"number":5,"position":"Sub","subbed":0,"playable":"D(C)","age":36,"height":197,"weight":95},"4173":{"name":"Arjen Robben","proRating":7.88,"gameStats":[[["blocked_scoring_att",[1]],["six_yard_block",[1]],["accurate_pass",[34]],["touches",[75]],["won_contest",[5]],["total_scoring_att",[3]],["total_pass",[41]],["total_tackle",[2]],["aerial_lost",[1]],["formation_place",[7]]]],"number":10,"position":"AMR","subbed":0,"playable":"AM(LR)","age":30,"height":180,"weight":80},"4567":{"name":"Bastian Schweinsteiger","proRating":7.74,"gameStats":[[["blocked_scoring_att",[1]],["accurate_pass",[70]],["touches",[96]],["total_scoring_att",[4]],["total_pass",[78]],["goals",[1]],["total_tackle",[2]],["aerial_lost",[2]],["fouls",[2]],["formation_place",[4]]]],"number":31,"position":"DMC","subbed":0,"playable":"M(C)","age":29,"height":183,"weight":79},"5570":{"name":"Philipp Lahm","proRating":6.22,"gameStats":[[["accurate_pass",[74]],["touches",[99]],["error_lead_to_goal",[1]],["total_pass",[77]],["total_tackle",[2]],["fouls",[1]],["formation_place",[2]]]],"number":21,"position":"DR","subbed":0,"playable":"D(LR),DM(C)","age":30,"height":170,"weight":66},"6683":{"name":"Dante","proRating":6.86,"gameStats":[[["accurate_pass",[62]],["touches",[77]],["yellow_card",[1]],["aerial_won",[3]],["total_pass",[64]],["aerial_lost",[1]],["fouls",[2]],["formation_place",[6]]]],"number":4,"position":"DC","subbed":0,"playable":"D(C)","age":30,"height":188,"weight":87},"9016":{"name":"Franck Ribéry","proRating":6.98,"gameStats":[[["accurate_pass",[41]],["touches",[56]],["goal_assist",[1]],["total_pass",[47]],["fouls",[2]],["formation_place",[11]]]],"number":7,"position":"AML","subbed":85,"playable":"AM(L)","age":30,"height":170,"weight":72},"10168":{"name":"Tom Starke","proRating":0,"gameStats":[[["formation_place",[0]]]],"number":22,"position":"Sub","subbed":0,"playable":"GK","age":32,"height":194,"weight":91},"13754":{"name":"Manuel Neuer","proRating":6.92,"gameStats":[[["accurate_pass",[32]],["touches",[54]],["saves",[2]],["aerial_won",[1]],["total_pass",[39]],["good_high_claim",[4]],["formation_place",[1]]]],"number":1,"position":"GK","subbed":0,"playable":"GK","age":27,"height":193,"weight":92},"13755":{"name":"Rafinha","proRating":0,"gameStats":[[["formation_place",[0]]]],"number":13,"position":"Sub","subbed":0,"playable":"D(R),DM(C),M(R)","age":28,"height":172,"weight":68},"14091":{"name":"Javi Martínez","proRating":7.44,"gameStats":[[["accurate_pass",[79]],["touches",[110]],["yellow_card",[1]],["aerial_won",[2]],["total_pass",[86]],["total_tackle",[3]],["fouls",[1]],["formation_place",[5]]]],"number":8,"position":"DC","subbed":0,"playable":"D(C),M(C)","age":25,"height":190,"weight":81},"23589":{"name":"Jerome Boateng","proRating":0,"gameStats":[[["formation_place",[0]]]],"number":17,"position":"Sub","subbed":0,"playable":"D(CR)","age":25,"height":192,"weight":90},"24088":{"name":"Mario Mandzukic","proRating":6.56,"gameStats":[[["blocked_scoring_att",[1]],["accurate_pass",[15]],["touches",[33]],["total_scoring_att",[3]],["aerial_won",[2]],["total_pass",[20]],["total_tackle",[2]],["aerial_lost",[8]],["fouls",[2]],["formation_place",[9]]]],"number":9,"position":"FW","subbed":0,"playable":"AM(L),FW","age":27,"height":187,"weight":84},"31772":{"name":"Toni Kroos","proRating":6.75,"gameStats":[[["accurate_pass",[27]],["touches",[40]],["total_scoring_att",[1]],["aerial_won",[1]],["total_pass",[31]],["total_tackle",[3]],["formation_place",[0]]]],"number":39,"position":"Sub","subbed":59,"playable":"M(CLR)","age":24,"height":182,"weight":78},"37099":{"name":"Thomas Müller","proRating":5.49,"gameStats":[[["accurate_pass",[4]],["touches",[6]],["total_scoring_att",[1]],["total_pass",[5]],["att_pen_target",[1]],["fouls",[1]],["formation_place",[0]]]],"number":25,"position":"Sub","subbed":85,"playable":"AM(CLR),FW","age":24,"height":186,"weight":75},"39722":{"name":"David Alaba","proRating":6.88,"gameStats":[[["accurate_pass",[38]],["touches",[74]],["won_contest",[3]],["total_scoring_att",[1]],["total_pass",[45]],["total_tackle",[1]],["aerial_lost",[3]],["formation_place",[3]]]],"number":27,"position":"DL","subbed":0,"playable":"D(L),M(CL)","age":21,"height":180,"weight":75},"74939":{"name":"Thiago Alcántara","proRating":7.31,"gameStats":[[["accurate_pass",[94]],["touches",[121]],["won_contest",[1]],["total_pass",[105]],["total_tackle",[2]],["aerial_lost",[2]],["fouls",[2]],["formation_place",[8]]]],"number":6,"position":"DMC","subbed":0,"playable":"DM(C),M(L)","age":22,"height":172,"weight":70},"80382":{"name":"Mario Götze","proRating":6.55,"gameStats":[[["accurate_pass",[21]],["touches",[39]],["won_contest",[1]],["total_scoring_att",[1]],["total_pass",[25]],["total_tackle",[1]],["aerial_lost",[1]],["fouls",[1]],["formation_place",[10]]]],"number":19,"position":"AMC","subbed":59,"playable":"AM(CLR),FW","age":21,"height":176,"weight":64}}
+arsenalPlayers = {"845":{"name":"Tomas Rosicky","proRating":6.6,"gameStats":[[["accurate_pass",[13]],["touches",[25]],["total_pass",[18]],["total_tackle",[2]],["formation_place",[0]]]],"number":7,"position":"Sub","subbed":45,"playable":"M(CLR)","age":33,"height":178,"weight":65},"1443":{"name":"Mikel Arteta","proRating":6.81,"gameStats":[[["accurate_pass",[24]],["touches",[43]],["yellow_card",[1]],["aerial_won",[1]],["total_pass",[27]],["total_tackle",[5]],["fouls",[2]],["formation_place",[4]]]],"number":8,"position":"DMC","subbed":77,"playable":"DM(C),M(L)","age":31,"height":183,"weight":64},"4522":{"name":"Santiago Cazorla","proRating":6.36,"gameStats":[[["blocked_scoring_att",[1]],["accurate_pass",[29]],["touches",[57]],["won_contest",[2]],["total_scoring_att",[1]],["total_pass",[35]],["total_tackle",[1]],["fouls",[1]],["formation_place",[10]]]],"number":19,"position":"AMC","subbed":0,"playable":"M(CLR)","age":29,"height":168,"weight":66},"6040":{"name":"Lukas Podolski","proRating":7.31,"gameStats":[[["blocked_scoring_att",[1]],["accurate_pass",[19]],["touches",[41]],["yellow_card",[1]],["won_contest",[1]],["total_scoring_att",[2]],["total_pass",[25]],["goals",[1]],["total_tackle",[1]],["fouls",[3]],["formation_place",[11]]]],"number":9,"position":"AML","subbed":0,"playable":"AM(CL),FW","age":28,"height":182,"weight":83},"6292":{"name":"Per Mertesacker","proRating":7.28,"gameStats":[[["accurate_pass",[26]],["touches",[48]],["aerial_won",[3]],["total_pass",[29]],["formation_place",[5]]]],"number":4,"position":"DC","subbed":0,"playable":"D(C)","age":29,"height":198,"weight":90},"6321":{"name":"Mathieu Flamini","proRating":6.06,"gameStats":[[["accurate_pass",[2]],["touches",[4]],["total_pass",[3]],["total_tackle",[1]],["aerial_lost",[1]],["formation_place",[0]]]],"number":20,"position":"Sub","subbed":84,"playable":"DM(C)","age":30,"height":178,"weight":67},"10209":{"name":"Thomas Vermaelen","proRating":6.8,"gameStats":[[["accurate_pass",[20]],["touches",[41]],["yellow_card",[1]],["aerial_won",[4]],["total_pass",[25]],["total_tackle",[2]],["aerial_lost",[2]],["fouls",[4]],["formation_place",[3]]]],"number":5,"position":"DL","subbed":0,"playable":"D(CL)","age":28,"height":180,"weight":75},"13756":{"name":"Mesut Özil","proRating":6,"gameStats":[[["accurate_pass",[7]],["touches",[21]],["total_pass",[12]],["aerial_lost",[1]],["formation_place",[7]]]],"number":11,"position":"AMR","subbed":45,"playable":"AM(CLR)","age":25,"height":183,"weight":76},"19471":{"name":"Bacary Sagna","proRating":7.23,"gameStats":[[["accurate_pass",[26]],["touches",[60]],["aerial_won",[5]],["total_pass",[37]],["total_tackle",[2]],["aerial_lost",[1]],["formation_place",[2]]]],"number":3,"position":"DR","subbed":0,"playable":"D(R)","age":31,"height":176,"weight":72},"20973":{"name":"Lukasz Fabianski","proRating":8.5,"gameStats":[[["accurate_pass",[12]],["touches",[52]],["penalty_save",[1]],["saves",[5]],["total_pass",[25]],["good_high_claim",[3]],["formation_place",[1]],["man_of_the_match",[1]]]],"number":21,"position":"GK","subbed":0,"playable":"GK","age":28,"height":190,"weight":83},"24444":{"name":"Olivier Giroud","proRating":6.31,"gameStats":[[["blocked_scoring_att",[1]],["accurate_pass",[17]],["touches",[37]],["total_scoring_att",[2]],["aerial_won",[2]],["total_pass",[24]],["total_tackle",[1]],["aerial_lost",[2]],["fouls",[2]],["formation_place",[9]]]],"number":12,"position":"FW","subbed":0,"playable":"FW","age":27,"height":192,"weight":88},"30051":{"name":"Laurent Koscielny","proRating":6.74,"gameStats":[[["accurate_pass",[20]],["penalty_conceded",[1]],["touches",[40]],["won_contest",[1]],["aerial_won",[3]],["total_pass",[25]],["total_tackle",[1]],["aerial_lost",[2]],["fouls",[2]],["formation_place",[6]]]],"number":6,"position":"DC","subbed":0,"playable":"D(C)","age":28,"height":186,"weight":75},"42878":{"name":"Emiliano Viviano","proRating":0,"gameStats":[[["formation_place",[0]]]],"number":13,"position":"Sub","subbed":0,"playable":"GK","age":28,"height":195,"weight":88},"84146":{"name":"Alex Oxlade-Chamberlain","proRating":8.02,"gameStats":[[["accurate_pass",[20]],["touches",[56]],["won_contest",[10]],["total_scoring_att",[1]],["total_pass",[27]],["fouls",[1]],["formation_place",[8]]]],"number":15,"position":"DMC","subbed":84,"playable":"AM(LR)","age":20,"height":180,"weight":70},"91879":{"name":"Carl Jenkinson","proRating":0,"gameStats":[[["formation_place",[0]]]],"number":25,"position":"Sub","subbed":0,"playable":"D(R)","age":22,"height":185,"weight":77},"119501":{"name":"Serge Gnabry","proRating":5.92,"gameStats":[[["touches",[5]],["total_scoring_att",[1]],["total_pass",[1]],["formation_place",[0]]]],"number":44,"position":"Sub","subbed":77,"playable":"AM(R)","age":18,"height":173,"weight":73},"136356":{"name":"Isaac Hayden","proRating":0,"gameStats":[[["formation_place",[0]]]],"number":45,"position":"Sub","subbed":0,"playable":"D","age":18,"height":187,"weight":79}}
+
+var initialMatchData = [
+    [
+        [37, 13, 'Bayern Munich', 'Arsenal', '03/11/2014 19:45:00', '03/11/2014 00:00:00', 6, 'FT', '0 : 0', '1 : 1', , , '*1 : 1'],
+        [
+            [
+                [8, [
+                        ['Dante', , 'yellow', , , 8, 6683, 0]
+                    ],
+                    [], 1, 0
+                ],
+                [26, [],
+                    [
+                        ['Lukas Podolski', , 'yellow', , , 26, 6040, 0]
+                    ], 0, 1
+                ],
+                [29, [],
+                    [
+                        ['Mikel Arteta', , 'yellow', , , 29, 1443, 0]
+                    ], 0, 1
+                ],
+                [45, [],
+                    [
+                        ['Mesut Özil', 'Tomas Rosicky', 'subst', , , 45, 13756, 845]
+                    ], 0, 1
+                ],
+                [54, [
+                        ['Bastian Schweinsteiger', 'Franck Ribéry', 'goal', '(1-0)', , 54, 4567, 9016]
+                    ],
+                    [], 1, 0
+                ],
+                [57, [],
+                    [
+                        ['Lukas Podolski', , 'goal', '(1-1)', , 57, 6040, 0]
+                    ], 0, 1
+                ],
+                [59, [
+                        ['Mario Götze', 'Toni Kroos', 'subst', , , 59, 80382, 31772]
+                    ],
+                    [], 1, 0
+                ],
+                [77, [],
+                    [
+                        ['Mikel Arteta', 'Serge Gnabry', 'subst', , , 77, 1443, 119501]
+                    ], 0, 1
+                ],
+                [79, [
+                        ['Javi Martínez', , 'yellow', , , 79, 14091, 0]
+                    ],
+                    [], 1, 0
+                ],
+                [83, [],
+                    [
+                        ['Thomas Vermaelen', , 'yellow', , , 83, 10209, 0]
+                    ], 0, 1
+                ],
+                [84, [],
+                    [
+                        ['Alex Oxlade-Chamberlain', 'Mathieu Flamini', 'subst', , , 84, 84146, 6321]
+                    ], 0, 1
+                ],
+                [85, [
+                        ['Franck Ribéry', 'Thomas Müller', 'subst', , , 85, 9016, 37099]
+                    ],
+                    [], 1, 0
+                ],
+                [90, [
+                        ['Thomas Müller', , 'penalty-missed', , , 90, 37099, 0]
+                    ],
+                    [], 1, 0
+                ]
+            ]
+        ],
+        [
+            [37, 'Bayern Munich', 6.89, [
+                    [
+                        ['blocked_scoring_att', [3]],
+                        ['att_goal_low_left', [1]],
+                        ['accurate_pass', [591]],
+                        ['att_miss_left', [2]],
+                        ['won_contest', [10]],
+                        ['att_sv_high_centre', [1]],
+                        ['ontarget_scoring_att', [6]],
+                        ['total_scoring_att', [14]],
+                        ['total_throws', [17]],
+                        ['aerial_won', [9]],
+                        ['total_pass', [663]],
+                        ['att_miss_high_left', [1]],
+                        ['goals', [1]],
+                        ['total_tackle', [18]],
+                        ['total_offside', [4]],
+                        ['att_sv_low_left', [1]],
+                        ['att_sv_low_centre', [2]],
+                        ['shot_off_target', [5]],
+                        ['aerial_lost', [18]],
+                        ['att_sv_low_right', [1]],
+                        ['fk_foul_lost', [14]],
+                        ['won_corners', [6]],
+                        ['possession_percentage', [67.1]],
+                        ['att_miss_high', [2]]
+                    ]
+                ],
+                [
+                    [13754, 'Manuel Neuer', 6.92, [
+                        [
+                            ['accurate_pass', [32]],
+                            ['touches', [54]],
+                            ['saves', [2]],
+                            ['aerial_won', [1]],
+                            ['total_pass', [39]],
+                            ['good_high_claim', [4]],
+                            ['formation_place', [1]]
+                        ]
+                    ], 1, 'GK', 1, 0, 0, 'GK', 27, 193, 92],
+                    [14091, 'Javi Martínez', 7.44, [
+                        [
+                            ['accurate_pass', [79]],
+                            ['touches', [110]],
+                            ['yellow_card', [1]],
+                            ['aerial_won', [2]],
+                            ['total_pass', [86]],
+                            ['total_tackle', [3]],
+                            ['fouls', [1]],
+                            ['formation_place', [5]]
+                        ]
+                    ], 2, 'DC', 8, 0, 0, 'D(C),M(C)', 25, 190, 81],
+                    [5570, 'Philipp Lahm', 6.22, [
+                        [
+                            ['accurate_pass', [74]],
+                            ['touches', [99]],
+                            ['error_lead_to_goal', [1]],
+                            ['total_pass', [77]],
+                            ['total_tackle', [2]],
+                            ['fouls', [1]],
+                            ['formation_place', [2]]
+                        ]
+                    ], 2, 'DR', 21, 0, 0, 'D(LR),DM(C)', 30, 170, 66],
+                    [39722, 'David Alaba', 6.88, [
+                        [
+                            ['accurate_pass', [38]],
+                            ['touches', [74]],
+                            ['won_contest', [3]],
+                            ['total_scoring_att', [1]],
+                            ['total_pass', [45]],
+                            ['total_tackle', [1]],
+                            ['aerial_lost', [3]],
+                            ['formation_place', [3]]
+                        ]
+                    ], 2, 'DL', 27, 0, 0, 'D(L),M(CL)', 21, 180, 75],
+                    [6683, 'Dante', 6.86, [
+                        [
+                            ['accurate_pass', [62]],
+                            ['touches', [77]],
+                            ['yellow_card', [1]],
+                            ['aerial_won', [3]],
+                            ['total_pass', [64]],
+                            ['aerial_lost', [1]],
+                            ['fouls', [2]],
+                            ['formation_place', [6]]
+                        ]
+                    ], 2, 'DC', 4, 0, 0, 'D(C)', 30, 188, 87],
+                    [80382, 'Mario Götze', 6.55, [
+                        [
+                            ['accurate_pass', [21]],
+                            ['touches', [39]],
+                            ['won_contest', [1]],
+                            ['total_scoring_att', [1]],
+                            ['total_pass', [25]],
+                            ['total_tackle', [1]],
+                            ['aerial_lost', [1]],
+                            ['fouls', [1]],
+                            ['formation_place', [10]]
+                        ]
+                    ], 3, 'AMC', 19, 1, 59, 'AM(CLR),FW', 21, 176, 64],
+                    [74939, 'Thiago Alcántara', 7.31, [
+                        [
+                            ['accurate_pass', [94]],
+                            ['touches', [121]],
+                            ['won_contest', [1]],
+                            ['total_pass', [105]],
+                            ['total_tackle', [2]],
+                            ['aerial_lost', [2]],
+                            ['fouls', [2]],
+                            ['formation_place', [8]]
+                        ]
+                    ], 3, 'DMC', 6, 0, 0, 'DM(C),M(L)', 22, 172, 70],
+                    [4567, 'Bastian Schweinsteiger', 7.74, [
+                        [
+                            ['blocked_scoring_att', [1]],
+                            ['accurate_pass', [70]],
+                            ['touches', [96]],
+                            ['total_scoring_att', [4]],
+                            ['total_pass', [78]],
+                            ['goals', [1]],
+                            ['total_tackle', [2]],
+                            ['aerial_lost', [2]],
+                            ['fouls', [2]],
+                            ['formation_place', [4]]
+                        ]
+                    ], 3, 'DMC', 31, 0, 0, 'M(C)', 29, 183, 79],
+                    [9016, 'Franck Ribéry', 6.98, [
+                        [
+                            ['accurate_pass', [41]],
+                            ['touches', [56]],
+                            ['goal_assist', [1]],
+                            ['total_pass', [47]],
+                            ['fouls', [2]],
+                            ['formation_place', [11]]
+                        ]
+                    ], 3, 'AML', 7, 1, 85, 'AM(L)', 30, 170, 72],
+                    [4173, 'Arjen Robben', 7.88, [
+                        [
+                            ['blocked_scoring_att', [1]],
+                            ['six_yard_block', [1]],
+                            ['accurate_pass', [34]],
+                            ['touches', [75]],
+                            ['won_contest', [5]],
+                            ['total_scoring_att', [3]],
+                            ['total_pass', [41]],
+                            ['total_tackle', [2]],
+                            ['aerial_lost', [1]],
+                            ['formation_place', [7]]
+                        ]
+                    ], 3, 'AMR', 10, 0, 0, 'AM(LR)', 30, 180, 80],
+                    [24088, 'Mario Mandzukic', 6.56, [
+                        [
+                            ['blocked_scoring_att', [1]],
+                            ['accurate_pass', [15]],
+                            ['touches', [33]],
+                            ['total_scoring_att', [3]],
+                            ['aerial_won', [2]],
+                            ['total_pass', [20]],
+                            ['total_tackle', [2]],
+                            ['aerial_lost', [8]],
+                            ['fouls', [2]],
+                            ['formation_place', [9]]
+                        ]
+                    ], 4, 'FW', 9, 0, 0, 'AM(L),FW', 27, 187, 84],
+                    [31772, 'Toni Kroos', 6.75, [
+                        [
+                            ['accurate_pass', [27]],
+                            ['touches', [40]],
+                            ['total_scoring_att', [1]],
+                            ['aerial_won', [1]],
+                            ['total_pass', [31]],
+                            ['total_tackle', [3]],
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 39, 2, 59, 'M(CLR)', 24, 182, 78],
+                    [217, 'Claudio Pizarro', 0, [
+                        [
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 14, 0, 0, 'AM(C),FW', 35, 184, 84],
+                    [23589, 'Jerome Boateng', 0, [
+                        [
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 17, 0, 0, 'D(CR)', 25, 192, 90],
+                    [10168, 'Tom Starke', 0, [
+                        [
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 22, 0, 0, 'GK', 32, 194, 91],
+                    [37099, 'Thomas Müller', 5.49, [
+                        [
+                            ['accurate_pass', [4]],
+                            ['touches', [6]],
+                            ['total_scoring_att', [1]],
+                            ['total_pass', [5]],
+                            ['att_pen_target', [1]],
+                            ['fouls', [1]],
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 25, 2, 85, 'AM(CLR),FW', 24, 186, 75],
+                    [2179, 'Daniel van Buyten', 0, [
+                        [
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 5, 0, 0, 'D(C)', 36, 197, 95],
+                    [13755, 'Rafinha', 0, [
+                        [
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 13, 0, 0, 'D(R),DM(C),M(R)', 28, 172, 68]
+                ],
+                ['4231', [
+                    [5, 1],
+                    [8, 3],
+                    [2, 3],
+                    [4, 5],
+                    [6, 3],
+                    [4, 3],
+                    [7, 7],
+                    [6, 5],
+                    [5, 9],
+                    [5, 7],
+                    [3, 7]
+                ]]
+            ],
+            [13, 'Arsenal', 6.85, [
+                    [
+                        ['blocked_scoring_att', [3]],
+                        ['accurate_pass', [235]],
+                        ['penalty_save', [1]],
+                        ['won_contest', [14]],
+                        ['ontarget_scoring_att', [3]],
+                        ['total_scoring_att', [7]],
+                        ['total_throws', [18]],
+                        ['att_goal_high_left', [1]],
+                        ['aerial_won', [18]],
+                        ['total_pass', [313]],
+                        ['att_miss_high_left', [1]],
+                        ['goals', [1]],
+                        ['total_tackle', [16]],
+                        ['total_offside', [3]],
+                        ['att_sv_low_centre', [1]],
+                        ['shot_off_target', [1]],
+                        ['aerial_lost', [9]],
+                        ['att_sv_low_right', [1]],
+                        ['fk_foul_lost', [15]],
+                        ['won_corners', [5]],
+                        ['possession_percentage', [32.9]]
+                    ]
+                ],
+                [
+                    [20973, 'Lukasz Fabianski', 8.5, [
+                        [
+                            ['accurate_pass', [12]],
+                            ['touches', [52]],
+                            ['penalty_save', [1]],
+                            ['saves', [5]],
+                            ['total_pass', [25]],
+                            ['good_high_claim', [3]],
+                            ['formation_place', [1]],
+                            ['man_of_the_match', [1]]
+                        ]
+                    ], 1, 'GK', 21, 0, 0, 'GK', 28, 190, 83],
+                    [30051, 'Laurent Koscielny', 6.74, [
+                        [
+                            ['accurate_pass', [20]],
+                            ['penalty_conceded', [1]],
+                            ['touches', [40]],
+                            ['won_contest', [1]],
+                            ['aerial_won', [3]],
+                            ['total_pass', [25]],
+                            ['total_tackle', [1]],
+                            ['aerial_lost', [2]],
+                            ['fouls', [2]],
+                            ['formation_place', [6]]
+                        ]
+                    ], 2, 'DC', 6, 0, 0, 'D(C)', 28, 186, 75],
+                    [19471, 'Bacary Sagna', 7.23, [
+                        [
+                            ['accurate_pass', [26]],
+                            ['touches', [60]],
+                            ['aerial_won', [5]],
+                            ['total_pass', [37]],
+                            ['total_tackle', [2]],
+                            ['aerial_lost', [1]],
+                            ['formation_place', [2]]
+                        ]
+                    ], 2, 'DR', 3, 0, 0, 'D(R)', 31, 176, 72],
+                    [6292, 'Per Mertesacker', 7.28, [
+                        [
+                            ['accurate_pass', [26]],
+                            ['touches', [48]],
+                            ['aerial_won', [3]],
+                            ['total_pass', [29]],
+                            ['formation_place', [5]]
+                        ]
+                    ], 2, 'DC', 4, 0, 0, 'D(C)', 29, 198, 90],
+                    [10209, 'Thomas Vermaelen', 6.8, [
+                        [
+                            ['accurate_pass', [20]],
+                            ['touches', [41]],
+                            ['yellow_card', [1]],
+                            ['aerial_won', [4]],
+                            ['total_pass', [25]],
+                            ['total_tackle', [2]],
+                            ['aerial_lost', [2]],
+                            ['fouls', [4]],
+                            ['formation_place', [3]]
+                        ]
+                    ], 2, 'DL', 5, 0, 0, 'D(CL)', 28, 180, 75],
+                    [1443, 'Mikel Arteta', 6.81, [
+                        [
+                            ['accurate_pass', [24]],
+                            ['touches', [43]],
+                            ['yellow_card', [1]],
+                            ['aerial_won', [1]],
+                            ['total_pass', [27]],
+                            ['total_tackle', [5]],
+                            ['fouls', [2]],
+                            ['formation_place', [4]]
+                        ]
+                    ], 3, 'DMC', 8, 1, 77, 'DM(C),M(L)', 31, 183, 64],
+                    [6040, 'Lukas Podolski', 7.31, [
+                        [
+                            ['blocked_scoring_att', [1]],
+                            ['accurate_pass', [19]],
+                            ['touches', [41]],
+                            ['yellow_card', [1]],
+                            ['won_contest', [1]],
+                            ['total_scoring_att', [2]],
+                            ['total_pass', [25]],
+                            ['goals', [1]],
+                            ['total_tackle', [1]],
+                            ['fouls', [3]],
+                            ['formation_place', [11]]
+                        ]
+                    ], 3, 'AML', 9, 0, 0, 'AM(CL),FW', 28, 182, 83],
+                    [13756, 'Mesut Özil', 6, [
+                        [
+                            ['accurate_pass', [7]],
+                            ['touches', [21]],
+                            ['total_pass', [12]],
+                            ['aerial_lost', [1]],
+                            ['formation_place', [7]]
+                        ]
+                    ], 3, 'AMR', 11, 1, 45, 'AM(CLR)', 25, 183, 76],
+                    [84146, 'Alex Oxlade-Chamberlain', 8.02, [
+                        [
+                            ['accurate_pass', [20]],
+                            ['touches', [56]],
+                            ['won_contest', [10]],
+                            ['total_scoring_att', [1]],
+                            ['total_pass', [27]],
+                            ['fouls', [1]],
+                            ['formation_place', [8]]
+                        ]
+                    ], 3, 'DMC', 15, 1, 84, 'AM(LR)', 20, 180, 70],
+                    [4522, 'Santiago Cazorla', 6.36, [
+                        [
+                            ['blocked_scoring_att', [1]],
+                            ['accurate_pass', [29]],
+                            ['touches', [57]],
+                            ['won_contest', [2]],
+                            ['total_scoring_att', [1]],
+                            ['total_pass', [35]],
+                            ['total_tackle', [1]],
+                            ['fouls', [1]],
+                            ['formation_place', [10]]
+                        ]
+                    ], 3, 'AMC', 19, 0, 0, 'M(CLR)', 29, 168, 66],
+                    [24444, 'Olivier Giroud', 6.31, [
+                        [
+                            ['blocked_scoring_att', [1]],
+                            ['accurate_pass', [17]],
+                            ['touches', [37]],
+                            ['total_scoring_att', [2]],
+                            ['aerial_won', [2]],
+                            ['total_pass', [24]],
+                            ['total_tackle', [1]],
+                            ['aerial_lost', [2]],
+                            ['fouls', [2]],
+                            ['formation_place', [9]]
+                        ]
+                    ], 4, 'FW', 12, 0, 0, 'FW', 27, 192, 88],
+                    [6321, 'Mathieu Flamini', 6.06, [
+                        [
+                            ['accurate_pass', [2]],
+                            ['touches', [4]],
+                            ['total_pass', [3]],
+                            ['total_tackle', [1]],
+                            ['aerial_lost', [1]],
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 20, 2, 84, 'DM(C)', 30, 178, 67],
+                    [136356, 'Isaac Hayden', 0, [
+                        [
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 45, 0, 0, 'D', 18, 187, 79],
+                    [845, 'Tomas Rosicky', 6.6, [
+                        [
+                            ['accurate_pass', [13]],
+                            ['touches', [25]],
+                            ['total_pass', [18]],
+                            ['total_tackle', [2]],
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 7, 2, 45, 'M(CLR)', 33, 178, 65],
+                    [42878, 'Emiliano Viviano', 0, [
+                        [
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 13, 0, 0, 'GK', 28, 195, 88],
+                    [119501, 'Serge Gnabry', 5.92, [
+                        [
+                            ['touches', [5]],
+                            ['total_scoring_att', [1]],
+                            ['total_pass', [1]],
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 44, 2, 77, 'AM(R)', 18, 173, 73],
+                    [91879, 'Carl Jenkinson', 0, [
+                        [
+                            ['formation_place', [0]]
+                        ]
+                    ], 5, 'Sub', 25, 0, 0, 'D(R)', 22, 185, 77]
+                ],
+                ['4231', [
+                    [5, 1],
+                    [2, 3],
+                    [8, 3],
+                    [6, 5],
+                    [4, 3],
+                    [6, 3],
+                    [3, 7],
+                    [4, 5],
+                    [5, 9],
+                    [5, 7],
+                    [7, 7]
+                ]]
+            ]
+        ]
+    ], 300
+];

@@ -1,0 +1,39 @@
+.clr-white { color: $clr-white; }
+.clr-black { color: $clr-black; }
+.clr-grey { color: $clr-grey; }
+.clr-back { color: $clr-back; }
+.clr-link { color: $clr-link; }
+.clr-link-dk { color: $clr-link-dk; }
+
+.bkg-green { background-color: $clr-link-dk; }
+.bkg-green-lt { background-color: lighten($clr-link-dk, 5%); }
+
+.float-left { float: left; }
+.full-width { width: 100%; }
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+.top-right { top: 0px; right: 0px; }
+
+.align-left { text-align: left; }
+.align-right { text-align: right; }
+.align-center { text-align: center; }
+
+.padding-top { padding-top: 20px; }
+
+.em { font-style: italic; }
+
+.button-green {
+  border: none;
+  padding: 15px 20px;
+  background: $clr-link;  
+  @include border-radius(5px);
+
+  &:hover {
+    background: $clr-link-hover;
+  }
+
+  &.margined {
+    margin: 5px 10px;
+  }
+}

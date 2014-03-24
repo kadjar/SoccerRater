@@ -1,0 +1,63 @@
+.row
+  div(class="field twelvecol formation-{{gameData.match.formations[0]}}")
+    .team-player(ng-repeat="player in gameData.match.playerArrays[0] | playerData:gameData.match.players[0]", ng-class="{{showedPlayer}}", class="{{player.position}}")
+      p.player(ng-click="showPlayer(player)") {{ player.number }}: {{ player.lastName }}  
+      //- .player-detail(ng-show="showPlayer == player.id", ng-class="{yay: showedPlayer == player.id }")
+      //-   p {{showPlayer}}
+      //-   p {{showPlayer == player.id}}
+.row.padded
+  .row.padding-top
+    .threecol.first.headshot
+      img(src="../img/players/{{selectedPlayer.headshot}}")
+    .ninecol.relative
+      p.absolute.top-right.playerDetail-number \#{{ selectedPlayer.number }}
+      p.playerDetail-name.playerDetail-firstName.float-left.full-width {{ selectedPlayer.firstName }}
+      p.playerDetail-name.playerDetail-lastName.float-left.full-width {{ selectedPlayer.lastName }}
+  <!-- {{selectedPlayer}} -->
+  .row
+    .sixcol.first
+      dl.playerDetail-stats
+        .row 
+          dt Age:
+          dd {{ selectedPlayer.age }}
+        .row
+          dt Positions:
+          dd {{ selectedPlayer.playable }}
+    .sixcol
+      dl.playerDetail-stats
+        .row
+          dt Height:
+          dd {{ selectedPlayer.height }}cm
+        .row
+          dt Weight:
+          dd {{ selectedPlayer.weight }}kg          
+  .row.ratings.padding-top(ng-show="inProgress")
+    p Rate this player:
+    .row.padding-top: slider.playerSlider(ng-model="userPlayerRating",floor="0",ceiling="10",step=".1", precision="1", stretch="1")
+    .row.align-right: button.playerSubmit.button-green.margined(ng-click="submitPlayerRating(selectedPlayer.id, userPlayerRating)") Submit Rating      
+  .row.ratings.padding-top
+    .row: p.align-center.clr-grey.em Player ratings are below. Pro Rating reflects the aggregate ratings given by professional soccer analysts. Live Rating reflects the average rating submitted by fans.
+    .row
+      .sixcol.first
+        dl.playerRatings-key
+          dt Pro Rating:
+          dd.playerRatings-proRating {{ gameData.match.players[0][selectedPlayer.id].gameStats.proRating.cumulative.toFixed(1) }}
+      .sixcol
+        dl.playerRatings-key
+          dt Live Rating:
+          dd.playerRatings-liveRating {{ gameData.match.players[0][selectedPlayer.id].gameStats.liveRating.cumulative.toFixed(1) }}      
+    .row.chart
+      svg(width="460", height="150", viewBox='0 0 100 100', preserveAspectRatio="none")
+        rect(class="score-chart-background", x="0", y="0", width="100%", height="100%")
+        rect(class="score-chart-time_elapsed", x="0", y="0", height="100%", ng-attr-width="{{time_as_pct}}")
+        line(class="score-chart-tick", x1="50%", x2="50%", y1="0", y2="100%")
+        path(class="score-chart-pro-rating", d="{{ gameData.match.players[0][selectedPlayer.id].gameStats.proRating.chart }}")
+        path(class="score-chart-live-rating", d="{{ gameData.match.players[0][selectedPlayer.id].gameStats.liveRating.chart }}")
+
+.row.padded.bkg-green
+  .twelvecol
+    h3 {{showedPlayer}}
+    h2 Game Events
+    ul.gameEvents-list
+      li.gameEvents-item(ng-repeat="event in history track by $index")
+        p {{event}}
