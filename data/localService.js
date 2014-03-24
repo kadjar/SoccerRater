@@ -11,7 +11,7 @@ var speedModifier = 10;
 
 exports.init = function() {
   var d = Q.defer();  
-  readFile('/gameData.json').then(function(data) {
+  readFile('/static/gameData.json').then(function(data) {
     newGame = {data: data[0]}
     d.resolve(data[0]);
   })
@@ -68,7 +68,6 @@ function Game(newGame) {
   this.startClock();
 
   this.buildRatingsQueue();
-  //events.eventEmitter.call(this);
 }
 
 Game.prototype.userRatings = { players: {} };
