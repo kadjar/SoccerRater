@@ -1,3 +1,5 @@
+// this layer is probably redundant. 
+
 var Q = require('q'),
 ls = require('./localService');
 
@@ -5,14 +7,6 @@ var currentGame = {}
 ,       history = []
 ,    inProgress = false
 ,    gameEvents;
-
-// exports.getGame = function() {
-//   var d = Q.defer();
-//   ls.getGame().then(function(data) {
-//     d.resolve({game: data, history: history })
-//   })  
-//   return d.promise;
-// }
 
 exports.init = function() {
   return { game: currentGame, history: history, inProgress: inProgress }
@@ -56,8 +50,6 @@ exports.eventSubscribe = function(callback) {
 }
 
 exports.ratingsSubmission = function(sub) {
-  // if (!inProgress)
-  //   return;
   ls.receivePlayerRating(sub);
 }
 

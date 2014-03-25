@@ -11,5 +11,16 @@ describe("Game", function(){
       })
     })
   })
+  describe('#startGame()', function() {
+    it('should be an instance of a game', function() {
+      ls.startGame().then(function(data) {
+        expect(data.ratings).to.be.an('object')
+        expect(data.gameEvents).to.be.an('object')
+        expect(data.data.match.gameclock).to.be.a('string')
+
+        ls.stopGame();
+      })
+    })
+  })
  
 });
