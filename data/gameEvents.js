@@ -11,13 +11,15 @@ var GameEvents = function(_super) {
 };
 var E = GameEvents.prototype;
 
+E.__proto__ = events.EventEmitter.prototype;
+
 E._getRandomPlayer = function(team) {
   var team = team == undefined ?  Math.floor(Math.random() * 2): team;
   var player = Math.floor(Math.random() * 10)
   return {team: team, id: this._super.playerMap[team].players[player] };
 }
 
-E.getRandomEvent = function() {
+E.fireRandomEvent = function() {
   var roll = Math.random();
   var method;
 
@@ -32,10 +34,12 @@ E.getRandomEvent = function() {
   else if (roll < 0.37) // ~ 8 / 90
     method = 'offside'
   else {
-     return []
+     return {};
   }
   var res = this._atomicEvents[method].call(this);
-  return res;
+  this.emit('gameEvent', { timestamp: (new Date()), events: res })
+  console.log('gameEvent', res);
+  //return res;
 };
 
 E._atomicEvents = {};

@@ -25,7 +25,7 @@ exports.startGame = function() {
 
     inProgress = true;
     d.resolve(currentGame.match.kickoff);
-    game.on('gameEvent', handleGameEvent)
+    game.gameEvents.on('gameEvent', handleGameEvent)
   });
   return d.promise;
 }

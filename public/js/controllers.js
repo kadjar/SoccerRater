@@ -68,7 +68,7 @@ angular.module('myApp.controllers', []).
       $scope.gameClock = "00:00";
       $scope.time_as_pct = "0%";
       inProgress = false;
-      $scope.gameEvents = [];
+      $scope.history = [];
       socket.emit('stopgame', function(data) {
         console.log('stopped', data)
       })

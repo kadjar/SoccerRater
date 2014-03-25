@@ -43,7 +43,7 @@ G.buildPlayerMap = function() {
 }
 
 
-G.__proto__ = events.EventEmitter.prototype;
+// G.__proto__ = events.EventEmitter.prototype;
 
 G.startClock = function() {
   console.log('clock started')
@@ -64,12 +64,7 @@ G.startClock = function() {
     }
 
     if (Math.random() < 0.033) {
-      var gameEvent = self.gameEvents.getRandomEvent();
-      console.log('gameEvent', gameEvent)
-
-      if (gameEvent.length > 0) {
-        self.emit('gameEvent', { timestamp: (new Date()), events: gameEvent })
-      }
+      var gameEvent = self.gameEvents.fireRandomEvent();
     }
     var now = new Date();
     var seconds = Math.floor((now - self.data.match.kickoff) / (1000 / speedModifier));
