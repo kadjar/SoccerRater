@@ -2,13 +2,13 @@
 
 // Declare app level module which depends on filters, and services
 
-angular.module('myApp', [
+angular.module('soccerRater', [
   'ngRoute',
 
-  'myApp.controllers',
-  'myApp.filters',
-  'myApp.services',
-  'myApp.directives',
+  'soccerRater.controllers',
+  'soccerRater.filters',
+  'soccerRater.services',
+  'soccerRater.directives',
 
   // 3rd party dependencies
   'btford.socket-io',
@@ -18,11 +18,7 @@ config(function ($routeProvider, $locationProvider) {
   $routeProvider.
     when('/view1', {
       templateUrl: 'partials/partial1',
-      controller: 'MyCtrl1'
-    }).
-    when('/view2', {
-      templateUrl: 'partials/partial2',
-      controller: 'MyCtrl2'
+      controller: 'SoccerRaterCtrl'
     }).
     otherwise({
       redirectTo: '/view1'

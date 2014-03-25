@@ -2,9 +2,7 @@
   div(class="field twelvecol formation-{{gameData.match.formations[0]}}")
     .team-player(ng-repeat="player in gameData.match.playerArrays[0] | playerData:gameData.match.players[0]", ng-class="{{showedPlayer}}", class="{{player.position}}")
       p.player(ng-click="showPlayer(player)") {{ player.number }}: {{ player.lastName }}  
-      //- .player-detail(ng-show="showPlayer == player.id", ng-class="{yay: showedPlayer == player.id }")
-      //-   p {{showPlayer}}
-      //-   p {{showPlayer == player.id}}
+
 .row.padded
   .row.padding-top
     .threecol.first.headshot

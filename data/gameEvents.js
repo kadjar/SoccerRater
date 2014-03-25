@@ -36,15 +36,14 @@ E.fireRandomEvent = function() {
   else {
      return {};
   }
-  var res = this._atomicEvents[method].call(this);
+  var res = this._atomicEvents[method].call(this, this._getRandomPlayer());
   this.emit('gameEvent', { timestamp: (new Date()), events: res })
   console.log('gameEvent', res);
   //return res;
 };
 
 E._atomicEvents = {};
-E._atomicEvents.caution = function() {
-  var player = this._getRandomPlayer();
+E._atomicEvents.caution = function(player) {
   this._adjRating(player, -2);
 
   return [{
@@ -55,8 +54,7 @@ E._atomicEvents.caution = function() {
     team: player.team
   }]
 }
-E._atomicEvents.foul = function() {
-  var player = this._getRandomPlayer();
+E._atomicEvents.foul = function(player) {
   this._adjRating(player, -.5);
 
   return [{
@@ -67,9 +65,7 @@ E._atomicEvents.foul = function() {
     team: player.team
   }]
 }
-E._atomicEvents.attempt = function() {
-  var player = this._getRandomPlayer();
-
+E._atomicEvents.attempt = function(player) {
   if (Math.random() > .5) {
     // on frame
     this._adjRating(player, .5);
@@ -103,8 +99,7 @@ E._atomicEvents.attempt = function() {
     }]
   }
 }
-E._atomicEvents.offside = function() {
-  var player = this._getRandomPlayer();
+E._atomicEvents.offside = function(player) {
   this._adjRating(player, -.2);
 
   return [{
@@ -115,9 +110,8 @@ E._atomicEvents.offside = function() {
     team: player.team
   }]
 }
-E._atomicEvents.goal = function() {
+E._atomicEvents.goal = function(player) {
   // scorer
-  var player = this._getRandomPlayer();    
   this._adjRating(player, 2);
 
   // assist

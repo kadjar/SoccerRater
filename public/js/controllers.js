@@ -4,8 +4,8 @@ var gameData, inProgress = false;
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-  controller('AppCtrl', ['$scope', 'socket', 'helperServices', '$rootScope',function ($scope, socket, helperServices, $rootScope) {
+angular.module('soccerRater.controllers', []).
+  controller('SoccerRaterCtrl', ['$scope', 'socket', 'helperServices', '$rootScope',function ($scope, socket, helperServices, $rootScope) {
     $scope.history = [];
 
     socket.on('init', function(res) {
@@ -46,8 +46,6 @@ angular.module('myApp.controllers', []).
           $scope.gameData.match = data;
         });
       })
-
-      //buildUI();
     }
 
     $scope.buildHistory = function(arr) {
@@ -82,45 +80,9 @@ angular.module('myApp.controllers', []).
     $scope.submitPlayerRating = function(id, rating) {
       socket.emit('playerSubmit', {playerId: id, playerRating: rating, sessionId: $rootScope.sessionId })
     }
-    // socket.on('game', function (inc) {
-    //   $scope.gameData = gameData = inc.res.game.data;
-
-    //   inc.res.history.forEach(function(histEvent) {
-    //     histEvent.events.forEach(function(event) {
-    //       $scope.gameEvents.push(event.eventText)          
-    //     })
-    //   })
-
-    //   $scope.name = gameData.name;
-    //   inProgress = inc.res.game.inProgress;
-
-    //   if (inProgress) 
-    //     helperServices.startClock(gameData.match.kickoff, tock)        
-    //   else {
-    //     $scope.gameClock = '00:00';
-    //     socket.on('kickoff', function(data) {
-    //       console.log('kickoff', data)
-    //       inProgress = true;
-    //       helperServices.startClock(data, tock)
-    //     });        
-    //   }
-
-    //   // socket.on('halt', function() {
-    //   //   console.log('halt')
-    //   //   $scope.stop();
-    //   // })
-
-    //   socket.on('heartbeat', handleHeartbeat)
-
-    //   buildUI();
-    // });
-
 
     
   }]).
   controller('MyCtrl1', function ($scope, socket) {
     socket.on('send:event', $scope.buildHistory);    
-  }).
-  controller('MyCtrl2', function ($scope) {
-    // write Ctrl here
-  });
+  })
