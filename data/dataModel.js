@@ -58,8 +58,8 @@ function handleGameEvent(e) {
   gameEvents(e)
 }
 
-(function init() {
-  ls.init().then(function(data) {
-    currentGame = data;
-  })
-})()
+// (function init() {
+//   ls.init().then(function(data) {
+//     currentGame = data;
+//   })
+// })()
