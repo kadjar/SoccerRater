@@ -4,11 +4,13 @@ var   fs = require('fs')
 var   ds = require('../dataService.js')
 ,     PM = require('./_playerModel.js');
 
-var db = null;
+var raw = null
+,    db = [];
 
 exports.init = function() {
   ds.get('players').then(function(res) {
-    db = res;
+    raw = res;
+    this.resetPlayers();
   }.bind(this));
 };
 
@@ -17,7 +19,10 @@ exports.getPlayer = function(id) {
 }
 
 exports.resetPlayers = function() {
-  db.forEach()
+  db = [];
+  raw.forEach(function(player) {
+    db.push(new PM(player))
+  })
 }
 
 function playerFilter(id) {
