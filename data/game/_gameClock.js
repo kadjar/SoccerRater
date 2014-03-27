@@ -1,6 +1,6 @@
 var events = require('events');
 
-var Clock = function(mod) {
+module.exports = function(mod) {
   this.__proto__ = events.EventEmitter.prototype;
 
   this._SECOND = mod ? 1000 / mod : 1000;
@@ -59,5 +59,3 @@ var Clock = function(mod) {
     return ("00" + num).slice(-2);
   }
 }
-
-module.exports = Clock;
