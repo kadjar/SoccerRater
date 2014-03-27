@@ -21,11 +21,12 @@ module.exports = function(mod) {
     this.kickoff = null;
     this.seconds = 0;
     this.minutes = 0;
-    this.text = '00:00';
+    this.text = '00:00';    
   }
 
   this._tick = function() {
     if (this.seconds > this._FULLTIME) {
+      this.emit('gameOver');
       this.stop();
       return;
     }

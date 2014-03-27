@@ -5,6 +5,6 @@ module.exports = function(type) {
   this.graph = 'M '
 
   this.pushRating = function(newRating) {
-    this.cumulative = newRating
+    this.cumulative += newRating;
   }
 }

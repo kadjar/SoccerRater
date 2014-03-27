@@ -11,16 +11,14 @@ angular.module('myApp.controllers', []).
     socket.on('init', function(res) {
       console.log(res)
       $rootScope.sessionId = res.sessionId;
-      $scope.gameData = res.game;
-      $scope.inProgress = res.inProgress;
+      $scope.game = res.game;      
 
-      if ($scope.inProgress) {        
-        startGame($scope.gameData.match.kickoff)
-
-        res.history.forEach($scope.buildHistory)
+      if ($scope.game.inProgress) {        
+        startGame($scope.game.clock.kickoff)
+        $scope.game.eventHistory.forEach($scope.buildHistory)
       }
 
-      $scope.selectedPlayer = $scope.gameData.match.players[0][$scope.gameData.match.playerArrays[0][0]]
+      $scope.selectedPlayer = $scope.game.players[$scope.game.match.players[0][0].id]
     })
 
     socket.on('kickoff', function (data) {
@@ -76,7 +74,7 @@ angular.module('myApp.controllers', []).
     }   
 
     $scope.showPlayer = function(player) {
-        $scope.selectedPlayer = player;  
+        $scope.selectedPlayer = $scope.game.players[player];  
     }
 
     $scope.submitPlayerRating = function(id, rating) {

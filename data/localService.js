@@ -6,7 +6,10 @@ var   fs = require('fs')
 var   gf = require('./game/gameFactory.js');
 
 exports.getGame = function(id) {
-  return gf.getGame(id)
+  return gf.getGame(id);
+}
+exports.resetGame = function(id) {
+  return gf.resetGame(id);
 }
 
 // var      newGame = {}
