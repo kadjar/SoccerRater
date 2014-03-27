@@ -5,12 +5,19 @@
 var ls = require('../data/localService.js')
 ,   ce = require('cloneextend');
 
+var game;
+
 module.exports = function (boss, socket) {
   ls.getGame('FCBvARS').then(function(res) {
     res.sessionId = socket.id;
+    game = res;
     console.log(res)
     //socket.emit('init', res)
   })
+  socket.on('startgame', function() {
+    game.start();
+  })
+
   // var quo = dm.init();
   // quo.sessionId = socket.id;
 

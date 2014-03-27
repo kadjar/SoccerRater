@@ -13,9 +13,13 @@ module.exports = function(raw) {
   this.players = new GamePlayers(this.data.players);
 
   this.start = function() {
-
+    this.clock.start();
   }
   this.stop = function() {
-
+    this.clock.stop();
   }
+
+  this.clock.on('second', function() {
+    console.log('tick ', this.clock.text, this.clock.seconds)
+  }.bind(this))
 }
