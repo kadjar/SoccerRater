@@ -16,12 +16,12 @@ angular.module('soccerRater', [
 ]).
 config(function ($routeProvider, $locationProvider) {
   $routeProvider.
-    when('/view1', {
+    when('/', {
       templateUrl: 'partials/partial1',
-      controller: 'SoccerRaterCtrl'
+      controller: 'MyCtrl1'
     }).
     otherwise({
-      redirectTo: '/view1'
+      redirectTo: '/'
     });
 
   $locationProvider.html5Mode(true);

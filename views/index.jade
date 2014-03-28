@@ -6,7 +6,7 @@ block body
       .sixcol.first
         a.logo.clr-white.h3(href="/") SoccerRater
       .sixcol
-        p.align-right {{ gameData.teams[0].abbr }} {{ gameData.match.score[0] }} --- {{ gameClock }} --- {{ gameData.match.score[1] }} {{ gameData.teams[1].abbr }}
+        p.align-right {{ game.match.teams[0].abbr }} {{ game.match.score[0] }} --- {{ gameClock }} --- {{ game.match.score[1] }} {{ game.match.teams[1].abbr }}
     .row.align-center
       button.button-green.margined(ng-click="start()") Start Game
       button.button-green.margined(ng-click="stop()") Reset Game      

@@ -16,48 +16,14 @@
         "id": "arsenal"
       }
     ],
-    "kickoff": 1394567100000,
-    "match": {
-      "players": [
-        {
-          "4173":{"firstName":"Arjen","lastName":"Robben","fullName":"Arjen Robben","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":7.88,"atomic":[],"chart":"M 0 50"}},"number":10,"position":"AMR","subbed":0,"playable":"AM(LR)","age":30,"height":180,"weight":80,"headshot":"4173.png","id":"4173"},
-          "4567":{"firstName":"Bastian","lastName":"Schweinsteiger","fullName":"Bastian Schweinsteiger","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":7.74,"atomic":[],"chart":"M 0 50"}},"number":31,"position":"DMCL","subbed":0,"playable":"M(C)","age":29,"height":183,"weight":79,"headshot":"4567.png","id":"4567"},
-          "5570":{"firstName":"Philipp","lastName":"Lahm","fullName":"Philipp Lahm","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.22,"atomic":[],"chart":"M 0 50"}},"number":21,"position":"DR","subbed":0,"playable":"D(LR),DM(C)","age":30,"height":170,"weight":66,"headshot":"5570.png","id":"5570"},
-          "6683":{"firstName":"","lastName":"Dante","fullName":"Dante","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.86,"atomic":[],"chart":"M 0 50"}},"number":4,"position":"DCL","subbed":0,"playable":"D(C)","age":30,"height":188,"weight":87,"headshot":"6683.png","id":"6683"},
-          "9016":{"firstName":"Franck","lastName":"Ribéry","fullName":"Franck Ribéry","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.98,"atomic":[],"chart":"M 0 50"}},"number":7,"position":"AML","subbed":85,"playable":"AM(L)","age":30,"height":170,"weight":72,"headshot":"9016.png","id":"9016"},
-          "13754":{"firstName":"Manuel","lastName":"Neuer","fullName":"Manuel Neuer","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.92,"atomic":[],"chart":"M 0 50"}},"number":1,"position":"GK","subbed":0,"playable":"GK","age":27,"height":193,"weight":92,"headshot":"13754.png","id":"13754"},
-          "14091":{"firstName":"Javi","lastName":"Martínez","fullName":"Javi Martínez","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":7.44,"atomic":[],"chart":"M 0 50"}},"number":8,"position":"DCR","subbed":0,"playable":"D(C),M(C)","age":25,"height":190,"weight":81,"headshot":"14091.png","id":"14091"},
-          "24088":{"firstName":"Mario","lastName":"Mandzukic","fullName":"Mario Mandzukic","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.56,"atomic":[],"chart":"M 0 50"}},"number":9,"position":"FW","subbed":0,"playable":"AM(L),FW","age":27,"height":187,"weight":84,"headshot":"24088.png","id":"24088"},
-          "39722":{"firstName":"David","lastName":"Alaba","fullName":"David Alaba","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.88,"atomic":[],"chart":"M 0 50"}},"number":27,"position":"DL","subbed":0,"playable":"D(L),M(CL)","age":21,"height":180,"weight":75,"headshot":"39722.png","id":"39722"},
-          "74939":{"firstName":"Thiago","lastName":"Alcántara","fullName":"Thiago Alcántara","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":7.31,"atomic":[],"chart":"M 0 50"}},"number":6,"position":"DMCR","subbed":0,"playable":"DM(C),M(L)","age":22,"height":172,"weight":70,"headshot":"74939.png","id":"74939"},
-          "80382":{"firstName":"Mario","lastName":"Götze","fullName":"Mario Götze","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.55,"atomic":[],"chart":"M 0 50"}},"number":19,"position":"AMC","subbed":59,"playable":"AM(CLR),FW","age":21,"height":176,"weight":64,"headshot":"80382.png","id":"80382"}
-        },{
-          "1443":{"firstName":"Mikel","lastName":"Arteta","fullName":"Mikel Arteta","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.81,"atomic":[],"chart":"M 0 50"}},"number":8,"position":"DMCL","subbed":77,"playable":"DM(C),M(L)","age":31,"height":183,"weight":64,"headshot":"1443.png","id":"1443"},
-          "4522":{"firstName":"Santiago","lastName":"Cazorla","fullName":"Santiago Cazorla","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.36,"atomic":[],"chart":"M 0 50"}},"number":19,"position":"AMC","subbed":0,"playable":"M(CLR)","age":29,"height":168,"weight":66,"headshot":"4522.png","id":"4522"},
-          "6040":{"firstName":"Lukas","lastName":"Podolski","fullName":"Lukas Podolski","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":7.31,"atomic":[],"chart":"M 0 50"}},"number":9,"position":"AML","subbed":0,"playable":"AM(CL),FW","age":28,"height":182,"weight":83,"headshot":"6040.png","id":"6040"},
-          "6292":{"firstName":"Per","lastName":"Mertesacker","fullName":"Per Mertesacker","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":7.28,"atomic":[],"chart":"M 0 50"}},"number":4,"position":"DCR","subbed":0,"playable":"D(C)","age":29,"height":198,"weight":90,"headshot":"6292.png","id":"6292"},
-          "10209":{"firstName":"Thomas","lastName":"Vermaelen","fullName":"Thomas Vermaelen","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.8,"atomic":[],"chart":"M 0 50"}},"number":5,"position":"DL","subbed":0,"playable":"D(CL)","age":28,"height":180,"weight":75,"headshot":"10209.png","id":"10209"},
-          "13756":{"firstName":"Mesut","lastName":"Özil","fullName":"Mesut Özil","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.1,"atomic":[],"chart":"M 0 50"}},"number":11,"position":"AMR","subbed":45,"playable":"AM(CLR)","age":25,"height":183,"weight":76,"headshot":"13756.png","id":"13756"},
-          "19471":{"firstName":"Bacary","lastName":"Sagna","fullName":"Bacary Sagna","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":7.23,"atomic":[],"chart":"M 0 50"}},"number":3,"position":"DR","subbed":0,"playable":"D(R)","age":31,"height":176,"weight":72,"headshot":"19471.png","id":"19471"},
-          "20973":{"firstName":"Lukasz","lastName":"Fabianski","fullName":"Lukasz Fabianski","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":8.5,"atomic":[],"chart":"M 0 50"}},"number":21,"position":"GK","subbed":0,"playable":"GK","age":28,"height":190,"weight":83,"headshot":"20973.png","id":"20973"},
-          "24444":{"firstName":"Olivier","lastName":"Giroud","fullName":"Olivier Giroud","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.31,"atomic":[],"chart":"M 0 50"}},"number":12,"position":"FW","subbed":0,"playable":"FW","age":27,"height":192,"weight":88,"headshot":"24444.png","id":"24444"},
-          "30051":{"firstName":"Laurent","lastName":"Koscielny","fullName":"Laurent Koscielny","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":6.74,"atomic":[],"chart":"M 0 50"}},"number":6,"position":"DCL","subbed":0,"playable":"D(C)","age":28,"height":186,"weight":75,"headshot":"30051.png","id":"30051"},
-          "84146":{"firstName":"Alex","lastName":"Oxlade-Chamberlain","fullName":"Alex Oxlade-Chamberlain","gameStats":{"liveRating":{"cumulative":5,"atomic":[],"chart":"M 0 50"},"proRating":{"cumulative":8.02,"atomic":[],"chart":"M 0 50"}},"number":15,"position":"DMCR","subbed":84,"playable":"AM(LR)","age":20,"height":180,"weight":70,"headshot":"84146.png","id":"84146"}
-        }
-      ],
-      "playerArrays": [
-        ["4173", "4567", "5570", "6683", "9016", "13754", "14091", "24088", "39722", "74939", "80382"],
-        ["1443", "4522", "6040", "6292", "10209", "13756", "19471", "20973", "24444", "30051", "84146"]
-      ],
-      "formations": [
-        "4-2-3-1",
-        "4-2-3-1"
-      ],
-      "score": [
-        0, 0
-      ],
-      "gameClock": "00:00",
-      "gameTime": null
-    }
+    "startTime": 1394567100000,
+    "players": [
+      [{"id":"13754","pos":"GK"}, {"id": "4173", "pos":"AMR" }, {"id": "4567", "pos":"DMCL" }, {"id": "5570", "pos":"DR" }, {"id": "6683", "pos":"DCL" }, {"id": "9016", "pos":"AML" }, {"id": "14091", "pos":"DCR" }, {"id": "24088", "pos":"FW" }, {"id": "39722", "pos":"DL" }, {"id": "74939", "pos":"DMCR" }, {"id":"80382", "pos":"AMC"}],
+      [{"id":"20973","pos":"GK"}, {"id": "1443", "pos":"DMCL" }, {"id": "4522", "pos":"AMC" }, {"id": "6040", "pos":"AML" }, {"id": "6292", "pos":"DCR" }, {"id": "10209", "pos":"DL" }, {"id": "13756", "pos":"AMR" }, {"id": "19471", "pos":"DR" }, {"id": "24444", "pos":"FW" }, {"id": "30051", "pos":"DCL" }, {"id":"84146", "pos":"DMCR"}]      
+    ],
+    "formations": [
+      "4-2-3-1",
+      "4-2-3-1"
+    ]
   }
 ]
