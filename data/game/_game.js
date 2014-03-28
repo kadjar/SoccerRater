@@ -13,7 +13,7 @@ module.exports = function(raw) {
   this.players = new GamePlayers(this.match.players);
 
   this.eventHistory = [];
-  this.events = new Events(this.match.players);
+  this.gameEvents = new Events(this.match.players);
   this._eventEmitter = new events.EventEmitter();
 
   this.handleEvents = function(events) {
@@ -47,7 +47,7 @@ module.exports = function(raw) {
   }
 
   this.clock.events.on('second', function() {    
-    var events = this.events.getRandomEvent();
+    var events = this.gameEvents.getRandomEvent();
     events && this.handleEvents(events);
 
   }.bind(this));

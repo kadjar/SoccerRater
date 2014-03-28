@@ -57,8 +57,8 @@ angular.module('soccerRater.controllers', []).
     }
 
     $scope.start = function() {
-      socket.emit('startgame', function(data) {
-        console.log('game started', data)
+      socket.emit('startgame', function() {
+        console.log('game started')
       })
     }   
 
