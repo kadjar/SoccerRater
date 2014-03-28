@@ -31,33 +31,33 @@
         .row
           dt Weight:
           dd {{ selectedPlayer.weight }}kg          
-  .row.ratings.padding-top(ng-show="inProgress")
+  .row.ratings.padding-top(ng-show="game.inProgress")
     p Rate this player:
     .row.padding-top: slider.playerSlider(ng-model="userPlayerRating",floor="0",ceiling="10",step=".1", precision="1", stretch="1")
     .row.align-right: button.playerSubmit.button-green.margined(ng-click="submitPlayerRating(selectedPlayer.id, userPlayerRating)") Submit Rating      
-  .row.ratings.padding-top
+  .row.ratings.padding-top(ng-show="game.inProgress")
     .row: p.align-center.clr-grey.em Player ratings are below. Pro Rating reflects the aggregate ratings given by professional soccer analysts. Live Rating reflects the average rating submitted by fans.
     .row
       .sixcol.first
         dl.playerRatings-key
           dt Pro Rating:
-          dd.playerRatings-proRating {{ game.match.players[0][selectedPlayer.id].gameStats.proRating.cumulative.toFixed(1) }}
+          dd.playerRatings-proRating {{ game.players[selectedPlayer.id].gameStats.proRating.cumulative.toFixed(1) }}
       .sixcol
         dl.playerRatings-key
           dt Live Rating:
-          dd.playerRatings-liveRating {{ game.match.players[0][selectedPlayer.id].gameStats.liveRating.cumulative.toFixed(1) }}      
+          dd.playerRatings-liveRating {{ game.players[selectedPlayer.id].gameStats.liveRating.cumulative.toFixed(1) }}      
     .row.chart
       svg(width="460", height="150", viewBox='0 0 100 100', preserveAspectRatio="none")
         rect(class="score-chart-background", x="0", y="0", width="100%", height="100%")
         rect(class="score-chart-time_elapsed", x="0", y="0", height="100%", ng-attr-width="{{time_as_pct}}")
         line(class="score-chart-tick", x1="50%", x2="50%", y1="0", y2="100%")
-        path(class="score-chart-pro-rating", d="{{ gameData.match.players[0][selectedPlayer.id].gameStats.proRating.chart }}")
-        path(class="score-chart-live-rating", d="{{ gameData.match.players[0][selectedPlayer.id].gameStats.liveRating.chart }}")
+        path(class="score-chart-pro-rating", d="{{ game.players[selectedPlayer.id].gameStats.proRating.graph }}")
+        path(class="score-chart-live-rating", d="{{ game.players[selectedPlayer.id].gameStats.liveRating.graph }}")
 
-.row.padded.bkg-green
+.row.padded.bkg-green(ng-show="game.inProgress")
   .twelvecol
     h3 {{showedPlayer}}
     h2 Game Events
     ul.gameEvents-list
       li.gameEvents-item(ng-repeat="event in history track by $index")
-        p {{event}}
+        p {{ event.time }} - {{ game.players[event.player].name.full }} {{event.text}}

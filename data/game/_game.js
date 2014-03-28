@@ -2,7 +2,8 @@ var events = require('events');
 
 var     Events = require('../events/events.js')
 ,        Clock = require('./_gameClock.js')
-,  GamePlayers = require('./_gamePlayers.js');
+,  GamePlayers = require('./_gamePlayers.js')
+,           ps = require('../player/playerService.js');
 
 module.exports = function(raw) {
   this.inProgress = false;
@@ -13,8 +14,7 @@ module.exports = function(raw) {
 
   this.eventHistory = [];
   this.events = new Events(this.match.players);
-  this._eventEmitter = new Object();
-  this._eventEmitter.__proto__ = events.EventEmitter.prototype;
+  this._eventEmitter = new events.EventEmitter();
 
   this.handleEvents = function(events) {
     events.forEach(function(event) {
@@ -43,19 +43,32 @@ module.exports = function(raw) {
   this.stop = function() {
     this.clock.stop();
     this.inProgress = false;
+    ps.resetPlayers();
   }
 
-  this.clock.on('second', function() {    
+  this.clock.events.on('second', function() {    
     var events = this.events.getRandomEvent();
     events && this.handleEvents(events);
 
   }.bind(this));
 
-  this.clock.on('minute', function() {
+  this.clock.events.on('minute', function() {
     console.log('tick ', this.clock.text, this.clock.seconds)
+
+    for (var player in this.players) {
+      this.players[player].gameStats.liveRating.flushQueue(this.clock.pctComplete);
+      this.players[player].gameStats.proRating.flushQueue(this.clock.pctComplete);
+    }
+
+    this._eventEmitter.emit('update')
   }.bind(this))
 
-  this.clock.on('gameOver', function() {
+  this.clock.events.on('gameOver', function() {
     this.inProgress = false;
+    this._eventEmitter.emit('gameOver')
   }.bind(this))
+
+  this.ratePlayer = function(req) {
+    this.players[req.playerId].gameStats.liveRating.pushRating(req.playerRating, req.sessionId)
+  }
 }

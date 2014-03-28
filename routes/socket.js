@@ -5,17 +5,17 @@
 var ls = require('../data/localService.js')
 ,   ce = require('cloneextend');
 
-module.exports = function (boss, socket) {
-  var game;
+var game;
+
+module.exports = function (boss, socket) {  
   console.log('user connected: ', socket.id)
 
   ls.getGame('FCBvARS').then(function(res) {
     game = res;
     console.log('game gotten, intiating', res.match.name)
-    //socket.emit('init', { game: res, sessionId: socket.id });
-    socket.emit('init', { game: res.clock, sessionId: socket.id });
-    
-    //socket.emit('init', res)
+    var send = ce.clone(res);
+
+    socket.emit('init', { game: send, sessionId: socket.id });    
   })
   socket.on('startgame', function() {
     if (game.inProgress)
@@ -29,20 +29,33 @@ module.exports = function (boss, socket) {
       console.log('event', event)
       boss.emit('gameEvent', event)
     })
-  })  
+
+    game._eventEmitter.on('gameOver', function() {
+      boss.emit('halt')
+    })
+
+    game._eventEmitter.on('update', function() {
+      var send = ce.clone(game);
+      boss.emit('update', send);
+    })    
+  })
 
   socket.on('stopgame', function() {
     if (!game.inProgress)
       return;
 
-    console.log('game stopped')
     game.stop();
     boss.emit('halt')
 
     ls.resetGame('FCBvARS').then(function(res) {
       socket.emit('init', { game: res, sessionId: socket.id });
     });
+  });  
+
+  socket.on('playerRating', function(data) {
+    game.ratePlayer(data)
   })
+
   // var quo = dm.init();
   // quo.sessionId = socket.id;
 

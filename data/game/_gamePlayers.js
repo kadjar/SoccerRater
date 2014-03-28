@@ -8,5 +8,5 @@ module.exports = function(raw) {
   function buildPlayer(player) {
     this[player.id] = ps.getPlayer(player.id);
     this[player.id].position = player.pos;
-  }  
+  }
 }

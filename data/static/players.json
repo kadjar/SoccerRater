@@ -232,7 +232,7 @@
   },
   {
     "id":"84146",
-    "name": {"first":"Alex","last":"Oxlade-Chamerlain","fullName": "Alex Oxlade-Chamberlain"},
+    "name": {"first":"Alex","last":"Oxlade-Chamerlain","full": "Alex Oxlade-Chamberlain"},
     "number":15,
     "playable":"AM(LR)",
     "age":20,

@@ -10,6 +10,8 @@ angular.module('myApp.controllers', []).
 
     socket.on('init', function(res) {
       console.log(res)
+      gameData = res.game;
+
       $rootScope.sessionId = res.sessionId;
       $scope.game = res.game;      
 
@@ -23,13 +25,17 @@ angular.module('myApp.controllers', []).
 
     socket.on('kickoff', function (data) {
       console.log('kickoff', data)
-      $scope.inProgress = true;
+      $scope.game.inProgress = true;
       startGame(data);
+    })
+
+    socket.on('halt', function() {
+      $scope.stop();
     })
 
     function tock(c, s) {
       $scope.gameClock = c;
-      $scope.time_as_pct = Math.floor(100 * (s / 5400) - 1) + '%'; // 5400 seconds in a 90-minute game  
+      $scope.time_as_pct = Math.floor(100 * (s / 5400)) + '%'; // 5400 seconds in a 90-minute game  
 
       $scope.$apply();
     }
@@ -39,19 +45,15 @@ angular.module('myApp.controllers', []).
 
       helperServices.startClock(stamp, tock)
 
-      socket.on('match:update', function(data) {        
+      socket.on('update', function(data) {        
         $scope.$apply(function() {
-          $scope.gameData.match = data;
+          $scope.game = data;
         });
       })
-
-      //buildUI();
     }
 
-    $scope.buildHistory = function(arr) {
-      arr.events.forEach(function(event) {
-        $scope.history.push(event.eventTime + ": " + event.eventText)          
-      })   
+    $scope.buildHistory = function(item) {
+      $scope.history.unshift(item);
     }
 
     $scope.start = function() {
@@ -65,7 +67,7 @@ angular.module('myApp.controllers', []).
       helperServices.stopClock();
       $scope.gameClock = "00:00";
       $scope.time_as_pct = "0%";
-      inProgress = false;
+      $scope.game.inProgress = false;
       $scope.gameEvents = [];
       socket.emit('stopgame', function(data) {
         console.log('stopped', data)
@@ -78,47 +80,10 @@ angular.module('myApp.controllers', []).
     }
 
     $scope.submitPlayerRating = function(id, rating) {
-      socket.emit('playerSubmit', {playerId: id, playerRating: rating, sessionId: $rootScope.sessionId })
+      socket.emit('playerRating', {playerId: id, playerRating: rating, sessionId: $rootScope.sessionId })
     }
-    // socket.on('game', function (inc) {
-    //   $scope.gameData = gameData = inc.res.game.data;
 
-    //   inc.res.history.forEach(function(histEvent) {
-    //     histEvent.events.forEach(function(event) {
-    //       $scope.gameEvents.push(event.eventText)          
-    //     })
-    //   })
-
-    //   $scope.name = gameData.name;
-    //   inProgress = inc.res.game.inProgress;
-
-    //   if (inProgress) 
-    //     helperServices.startClock(gameData.match.kickoff, tock)        
-    //   else {
-    //     $scope.gameClock = '00:00';
-    //     socket.on('kickoff', function(data) {
-    //       console.log('kickoff', data)
-    //       inProgress = true;
-    //       helperServices.startClock(data, tock)
-    //     });        
-    //   }
-
-    //   // socket.on('halt', function() {
-    //   //   console.log('halt')
-    //   //   $scope.stop();
-    //   // })
-
-    //   socket.on('heartbeat', handleHeartbeat)
-
-    //   buildUI();
-    // });
-
-
-    
   }]).
   controller('MyCtrl1', function ($scope, socket) {
-    socket.on('send:event', $scope.buildHistory);    
-  }).
-  controller('MyCtrl2', function ($scope) {
-    // write Ctrl here
-  });
+    socket.on('gameEvent', $scope.buildHistory);    
+  })

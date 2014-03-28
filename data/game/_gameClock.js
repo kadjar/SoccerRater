@@ -1,14 +1,14 @@
 var events = require('events');
 
 module.exports = function(mod) {
-  this.__proto__ = events.EventEmitter.prototype;
+  this.events = new events.EventEmitter();
 
   this._SECOND = mod ? 1000 / mod : 1000;
   this._MINUTE = 60;
-  this._FULLTIME = 5400;  
+  this._FULLTIME = 5400; 
 
   this.start = function() {
-    this.reset();
+    this.resetData();
     this.kickoff = new Date();
     this._ticker = setInterval(this._tick.bind(this), this._SECOND);
   }
@@ -17,29 +17,33 @@ module.exports = function(mod) {
     clearInterval(this._ticker);
   }
 
-  this.reset = function() {
+  this.resetData = function() {
     this.kickoff = null;
     this.seconds = 0;
     this.minutes = 0;
+    this.pctComplete = 0;
     this.text = '00:00';    
   }
 
+  this.resetData();
+
   this._tick = function() {
     if (this.seconds > this._FULLTIME) {
-      this.emit('gameOver');
+      this.events.emit('gameOver');
       this.stop();
       return;
     }
 
     if (this.seconds % this._MINUTE === 0) {
       this.minutes = this.seconds / this._MINUTE;
-      this.emit('minute', this.minutes);
+      this.events.emit('minute', this.minutes);
     }
 
-    this.emit('second');
+    this.events.emit('second');
 
     this.seconds = _generateSeconds(new Date(), this.kickoff, this._SECOND);
     this.text = _generateText(this.seconds + 1);
+    this.pctComplete = _generatePct(this.seconds, this._FULLTIME);
 
     this.seconds++;
   }
@@ -54,6 +58,10 @@ module.exports = function(mod) {
     ,   sec = secs % 60;
 
     return _timePad(min) + ":" + _timePad(sec);
+  }
+
+  function _generatePct(secs, full) {
+    return secs / full;
   }
 
   function _timePad(num) {

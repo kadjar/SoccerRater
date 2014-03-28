@@ -1,4 +1,5 @@
-var   R = require('../rating/rating.js');
+var   Pro = require('../rating/proRating.js')
+,    Live = require('../rating/liveRating.js')
 
 module.exports = function(raw) {
   for (var key in raw) {
@@ -7,8 +8,8 @@ module.exports = function(raw) {
 
   this.gameStats = { 
     stats: {},
-    liveRating: new R('live'),
-    proRating: new R('pro')
+    liveRating: new Live(),
+    proRating: new Pro()
   }
 }
 
