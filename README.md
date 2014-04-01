@@ -1,6 +1,6 @@
 # SoccerRater
 
-_A proof-of-concept socketed web application for soccer fans to interact with any game by submitting player ratings, and comparing those ratings against soccer experts, friends, etc._
+_A proof-of-concept socketed web application for soccer fans to interact with any game by submitting player ratings, compare those ratings against soccer experts, friends, etc._
 
 ## Project Setup
 
