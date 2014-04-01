@@ -5,7 +5,7 @@ _A proof-of-concept socketed web application for soccer fans to interact with an
 ## Project Setup
 
 Dependencies:
-- Node.js
+- Node.js (written on v0.10.21)
 - Compass (Ruby) to compile .scss
 
 Steps:  
