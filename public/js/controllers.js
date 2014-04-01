@@ -4,9 +4,13 @@ var gameData, inProgress = false;
 
 /* Controllers */
 
+var GAMEID = 'FCBvARS';
+
 angular.module('soccerRater.controllers', []).
   controller('SoccerRaterCtrl', ['$scope', 'socket', 'helperServices', '$rootScope',function ($scope, socket, helperServices, $rootScope) {
     $scope.history = [];
+
+    socket.emit('init', GAMEID)
 
     socket.on('init', function(res) {
       console.log(res)
@@ -57,9 +61,7 @@ angular.module('soccerRater.controllers', []).
     }
 
     $scope.start = function() {
-      socket.emit('startgame', function() {
-        console.log('game started')
-      })
+      socket.emit('startgame', GAMEID)
     }   
 
     $scope.stop = function() {
@@ -69,9 +71,7 @@ angular.module('soccerRater.controllers', []).
       $scope.time_as_pct = "0%";
       $scope.game.inProgress = false;
       $scope.gameEvents = [];
-      socket.emit('stopgame', function(data) {
-        console.log('stopped', data)
-      })
+      socket.emit('stopgame', GAMEID)
       
     }   
 
@@ -80,7 +80,7 @@ angular.module('soccerRater.controllers', []).
     }
 
     $scope.submitPlayerRating = function(id, rating) {
-      socket.emit('playerRating', {playerId: id, playerRating: rating, sessionId: $rootScope.sessionId })
+      socket.emit('playerRating', {playerId: id, playerRating: rating, sessionId: $rootScope.sessionId, gameId: GAMEID })
     }
 
   }]).

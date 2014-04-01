@@ -55,7 +55,8 @@ module.exports = function (boss, socket) {
   });  
 
   socket.on('playerRating', function(data) {
-    ls.getGame(gameId).then(function(game) {
+    console.log(data)
+    ls.getGame(data.gameId).then(function(game) {
       game.ratePlayer(data)
     });
   })
