@@ -4,7 +4,6 @@
 
 var express = require('express'),
   routes = require('./routes'),
-  api = require('./routes/api'),
   http = require('http'),
   path = require('path'),
   stylus = require('stylus'),
@@ -59,11 +58,6 @@ if (app.get('env') === 'production') {
 // serve index and view partials
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
-
-// JSON API
-app.get('/api/name', api.name);
-app.get('/api/game', api.game);
-app.get('/api/startgame', api.startgame);
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);
