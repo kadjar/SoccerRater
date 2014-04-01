@@ -8,11 +8,11 @@ Dependencies:
 - Node.js
 - Compass (Ruby) to compile .scss
 
-Steps:
-1. Clone the project into an empty folder
-2. Run `npm install`
-3. Run `node app`
-4. Send your browser to `http://localhost:3000`
+Steps:  
+1. Clone the project into an empty folder  
+2. Run `npm install`  
+3. Run `node app`  
+4. Send your browser to `http://localhost:3000`  
 
 ## Deploying
 
